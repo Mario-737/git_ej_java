@@ -5,6 +5,8 @@ public class Ej2 {
         int[] edades = new int[5];
         int mayor = 0;
         int menor = 9999999;
+        int mayorDeEdad = 0;
+        int menorDeEdad = 0;
 
         Scanner teclado = new Scanner(System.in);
         
@@ -18,6 +20,13 @@ public class Ej2 {
             if (edad<menor) {
                 menor=edad;
             }
+            if (edad>18) {
+                mayorDeEdad++;
+            }
+            if (edad<14) {
+                menorDeEdad++;
+            }
+
         }
         teclado.close();
         
@@ -26,6 +35,6 @@ public class Ej2 {
         }
         System.out.println();
         System.out.printf("La mayor edad es %d y la menor es %d\n",mayor,menor);
-
+        System.out.printf("Hay %d mayores de edad y %d menores de edad\n",mayorDeEdad,menorDeEdad);
     }
 }
