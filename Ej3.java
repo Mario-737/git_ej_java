@@ -7,7 +7,24 @@ public class Ej3 {
 
         for (int i = 0; i < numeros.length; i++) {
             numeros[i] = rdm.nextInt(1, 101);
+            
+        }
+
+        // Ordenar el array:
+        for (int i = 0; i < numeros.length-1; i++) {
+            for (int j = i+1; j < numeros.length ; j++) {
+                if (numeros[j]>numeros[i]){
+                    int aux = numeros[j];
+                    numeros[j] = numeros[i];
+                    numeros[i] = aux;
+                }
+            }
+        }       
+
+        for (int i = 0; i < numeros.length; i++) {
             System.out.print(numeros[i] + ", ");
         }
+        
+
     }
 }
