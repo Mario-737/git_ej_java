@@ -55,7 +55,7 @@ public class Ej1 {
             }
 
         }
-        teclado.close();
+
         
         for (double i : numeros) {
             System.out.print(i+", ");
@@ -65,8 +65,17 @@ public class Ej1 {
         System.out.println("La media es: "+suma/5);
         System.out.printf("El mayor es %.1f y el menor es %.1f\n",mayor,menor);
         System.out.printf("Hay %d positivos y %d negativos\n",positivos,negativos);
-        System.out.printf("La frecuencia de los números del 1 al 5 es: %d %d %d %d %d ", uno, dos, tres, cuatro, cinco);
+        System.out.printf("La frecuencia de los números del 1 al 5 es: %d %d %d %d %d \n", uno, dos, tres, cuatro, cinco);
 
+
+        System.out.println("¿Qué número quieres eliminar (posición 0-4)?");
+        int pos = teclado.nextInt();
+        numeros[pos]=0;
+        teclado.close();
+
+        for (double i : numeros) {
+            System.out.print(i+", ");
+        }
 
     }
 }
