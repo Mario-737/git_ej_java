@@ -11,6 +11,8 @@ public class Ej1 {
 
         Scanner teclado = new Scanner(System.in);
         
+        int uno=0, dos=0, tres=0, cuatro=0, cinco=0;
+
         for (int i = 0; i < numeros.length; i++) {
             System.out.println("Introduce un número:");
             int numero = teclado.nextInt();
@@ -29,6 +31,29 @@ public class Ej1 {
                 negativos++;
             }
 
+            // Para la frecuencia de cada número, suponemos que
+            // se introducirán números del 1 al 5
+
+            switch (numero) {
+                case 1:
+                    uno++;
+                    break;
+                case 2:
+                    dos++;
+                    break;
+                case 3:
+                    tres++;
+                    break;
+                case 4:
+                    cuatro++;
+                    break;
+                case 5:
+                    cinco++;
+                    break;
+                default:
+                    break;
+            }
+
         }
         teclado.close();
         
@@ -40,6 +65,7 @@ public class Ej1 {
         System.out.println("La media es: "+suma/5);
         System.out.printf("El mayor es %.1f y el menor es %.1f\n",mayor,menor);
         System.out.printf("Hay %d positivos y %d negativos\n",positivos,negativos);
+        System.out.printf("La frecuencia de los números del 1 al 5 es: %d %d %d %d %d ", uno, dos, tres, cuatro, cinco);
 
 
     }
