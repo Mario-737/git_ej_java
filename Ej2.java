@@ -10,6 +10,7 @@ public class Ej2 {
         int joven = 0;
         int adulto = 0;
         int anciano = 0;
+        boolean todosMayores = true;
 
         Scanner teclado = new Scanner(System.in);
         
@@ -24,11 +25,12 @@ public class Ej2 {
                 menor=edad;
             }
 
-            if (edad>18) {
+            if (edad>=18) {
                 mayorDeEdad++;
             }
             if (edad<18) {
                 menorDeEdad++;
+                todosMayores = false;
             }
 
             if (edad>=19 && edad<30) {
@@ -38,6 +40,7 @@ public class Ej2 {
             } else if (edad>=50) {
                 anciano++;
             }
+
 
         }
         teclado.close();
@@ -52,5 +55,6 @@ public class Ej2 {
         System.out.printf("18-30: %d\n", joven);
         System.out.printf("31-50: %d\n", adulto);
         System.out.printf("+51: %d\n", anciano);
+        System.out.println("¿Son todos mayores de edad? " + todosMayores);
     }
 }
