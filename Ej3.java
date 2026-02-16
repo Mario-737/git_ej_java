@@ -4,6 +4,8 @@ public class Ej3 {
     public static void main(String[] args) {
         Random rdm = new Random();
         int[] numeros = new int[10];
+        int[] pares = new int[10];
+        int[] impares = new int[10];
 
         for (int i = 0; i < numeros.length; i++) {
             numeros[i] = rdm.nextInt(1, 101);
@@ -24,7 +26,9 @@ public class Ej3 {
         for (int i = 0; i < numeros.length; i++) {
             if (numeros[i]%2==0) {
                 System.out.print(numeros[i] + ", ");
-
+                pares[i]=numeros[i];
+            } else {
+                impares[i]=numeros[i];
             }
         }
         
